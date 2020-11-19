@@ -15,7 +15,7 @@ public class Main {
 
         Dropdown dropdown = new Dropdown();
 
-//        dropdown.runSelect();
+        dropdown.runSelect();
 
         UpdatedDropdown updateddropdown = new UpdatedDropdown();
 
@@ -29,7 +29,7 @@ public class Main {
 
         ParentChild parentchild = new ParentChild();
 
-        parentchild.runParentChild();
+//        parentchild.runParentChild();
 
     }
 }
