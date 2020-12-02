@@ -3,10 +3,12 @@ package com.company;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
-public class ParentChild {
+public class HandlingCalendarUI {
 
-    public void runParentChild() throws InterruptedException {
+    public void testCalendar() throws InterruptedException {
 
         // set driver path using setProperty method
         System.setProperty("webdriver.chrome.driver", "C:\\Work\\chromedriver.exe");
@@ -27,7 +29,6 @@ public class ParentChild {
         driver.findElement(By.xpath("//*[@id='ctl00_mainContent_ddl_destinationStation1'] /option[@value='MAA']")).click();
 //        driver.findElement(By.id("flightSearchContainer")).click();
 
-        //Handling Calendar UI
         driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-active")).click();
     }
 }

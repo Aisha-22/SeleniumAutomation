@@ -20,9 +20,9 @@ public class UpdatedDropdown {
         Thread.sleep(2000L);
 
         Select s = new Select(driver.findElement(By.id("ctl00_mainContent_ddl_Adult")));
-//        s.selectByValue("2");
+        s.selectByValue("2");
 //        s.selectByIndex(6);
-        s.selectByVisibleText("7");
+//        s.selectByVisibleText("7");
 
         driver.findElement(By.id("divpaxinfo")).click();
 

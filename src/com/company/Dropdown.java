@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,11 +24,15 @@ public class Dropdown {
         driver.get("https://www.spicejet.com/");
         Thread.sleep(2000L);
 
-        System.out.println(driver.findElement(By.cssSelector("input[id*='friendsandfamily']")).isSelected());
+//        System.out.println(driver.findElement(By.cssSelector("input[id*='friendsandfamily']")).isSelected());
+        //Assertions
+        Assert.assertFalse(driver.findElement(By.cssSelector("input[id*='friendsandfamily']")).isSelected());
         //Regular expressions - use '*' Identify any 'id' matching with the friendsandfamily
         driver.findElement(By.cssSelector("input[id*='friendsandfamily']")).click();
         //A method in Selenium to find if the checkbox is selected or not 'isSelected'
-        System.out.println(driver.findElement(By.cssSelector("input[id*='friendsandfamily']")).isSelected());
+        //System.out.println(driver.findElement(By.cssSelector("input[id*='friendsandfamily']")).isSelected());
+        //Assertions
+        Assert.assertTrue(driver.findElement(By.cssSelector("input[id*='friendsandfamily']")).isSelected());
 
         //Count number of checkboxes
         System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size());

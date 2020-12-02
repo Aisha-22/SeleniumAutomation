@@ -1,7 +1,13 @@
 package com.company;
 
+import com.company.Dropdown;
+import com.company.UpdatedDropdown;
 import com.company.ParentChild;
 import com.company.DynamicDropdown;
+import com.company.HandlingCalendarUI;
+import com.company.DisabledEnabledValidating;
+import com.company.EndToEndTestUI;
+
 
 public class Main {
 
@@ -15,7 +21,7 @@ public class Main {
 
         Dropdown dropdown = new Dropdown();
 
-        dropdown.runSelect();
+//        dropdown.runSelect();
 
         UpdatedDropdown updateddropdown = new UpdatedDropdown();
 
@@ -25,11 +31,21 @@ public class Main {
 
 //        dynamicdropdown.runDymanicDropdown();
 
-
-
         ParentChild parentchild = new ParentChild();
 
 //        parentchild.runParentChild();
+
+        HandlingCalendarUI handlingcalendarui = new HandlingCalendarUI();
+
+//        handlingcalendarui.testCalendar();
+
+        DisabledEnabledValidating disabledenabledvalidating = new DisabledEnabledValidating();
+
+//        disabledenabledvalidating.runValidation();
+
+        EndToEndTestUI endtoendtestui = new EndToEndTestUI();
+
+        endtoendtestui.runTestUI();
 
     }
 }
